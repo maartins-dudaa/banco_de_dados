@@ -136,7 +136,7 @@ select avg(valor) as media from pizzas where nome like "%esa";
  
  insert into pedidos(id, data, valor) values(9, '2024-10-02', 0);
  
--- quantos peddos o cliente fez
+-- quantos pedidos cada cliente fez no total?
 select nome, telefone, count(pedidos.id) from clientes
 left join pedidos on clientes.id = pedidos.cliente_id
 group by nome, telefone;
